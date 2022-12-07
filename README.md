@@ -2,7 +2,7 @@
 * Status
   * finalizado
 * Preview
-  * https://ze-aglailson.github.io/template-menu-responsivo-autoscroll/
+  * https://dev-aglailson.github.io/linestay/
 * Skills
   * HTML 
   * CSS  

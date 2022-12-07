@@ -14,7 +14,6 @@
     padding: v.$padding-container;
     position: fixed;
     z-index: 2;
-    background-color: #333;
 
     .content-logo-btn-menu{
         width: 100%;
@@ -29,12 +28,15 @@
             align-items: center;
             a{
                 color: v.$cor-branco;
+                span{
+                    color: #FF8000;
+                }
             }
         }
 
         .logo-escuro{
             a{
-                color: v.$cor-branco;
+                color: #333;
             }
         }
 
@@ -115,7 +117,7 @@
                 a{
                     width: 100%;
                     display: block;
-                    padding: 5px 30px;
+                    padding: 8px 30px;
                     font-size: .9em;
                     color: v.$cor-secundaria;
                 }
@@ -145,8 +147,56 @@
 
 //Mediaqueries 
 @media screen and (min-width: 990px) {
-    .cabecalho-branco{ //Muda a cor dos itens do menu para cor secundaria 
+    .container-cabecalho{
+        padding: 15px 150px;
+
+        .content-logo-btn-menu{
+            .btn-menu{
+                display: none;
+            }
     
+            .content-menu{
+                height: 100%;
+                width: auto;
+                position: relative;
+                left: inherit;
+                background-color: inherit;
+                transition: none;
+                
+                .menu-principal {
+                    width: auto;
+                    background-color: transparent;
+                    transform: none;
+                    padding: 0;
+                    transition: none;
+        
+                    .ul-items-menu{
+                        padding: 0;
+                        height: 100%;
+                        flex-direction: row;
+                        border:none;
+        
+                        
+                        li.item{
+                            width: auto;
+                            a{
+                                color: v.$cor-branco;
+                            }
+                        }
+                        
+                        li.item:hover a{
+                            color: #FF8000;
+                            border-radius: 4px;
+                            background-color: #FFF;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+    .cabecalho-branco{ //Muda a cor dos itens do menu para cor secundaria 
+        
         .content-logo-btn-menu{
     
             .content-menu{
@@ -157,7 +207,7 @@
     
                         li.item{
                             a{
-                                color: #FFF;
+                                color: #333;
                             }
                         }
                     }
@@ -166,51 +216,5 @@
     
         }
         
-    }
-    .container-cabecalho{
-        .content-logo-btn-menu{
-            .btn-menu{
-                display: none;
-            }
-            
-        }
-    }
-
-    .content-menu{
-        height: 100%;
-        width: auto;
-        position: relative;
-        left: inherit;
-        background-color: inherit;
-        transition: none;
-        
-        .menu-principal {
-            width: auto;
-            background-color: transparent;
-            transform: none;
-            padding: 0;
-            transition: none;
-
-            .ul-items-menu{
-                padding: 0;
-                height: 100%;
-                flex-direction: row;
-                border:none;
-
-                
-                li.item{
-                    width: auto;
-                    a{
-                        color: v.$cor-branco;
-                    }
-                }
-                
-                li.item:hover a{
-                    color: v.$cor-branco;
-                    background-color: transparent;
-                    text-decoration: underline;
-                }
-            }
-        }
     }
 }
