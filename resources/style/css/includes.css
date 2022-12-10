@@ -241,6 +241,9 @@ a {
     border-radius: 4px;
     background-color: #FFF;
   }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu:hover .btn-submenu-ativo {
+    border-radius: 4px 4px 0 0;
+  }
   .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu {
     display: flex;
     justify-content: space-between;
@@ -283,7 +286,11 @@ a {
 }
 @media screen and (min-width: 1280px) {
   .container-cabecalho {
-    padding: 15px 150px;
+    padding: 15px 0;
+  }
+  .container-cabecalho .content-logo-btn-menu {
+    width: 1280px;
+    margin: 0 auto;
   }
 }
 .section-home {
