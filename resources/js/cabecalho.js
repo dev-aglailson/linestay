@@ -10,8 +10,64 @@ window.addEventListener('load', function(){
     var posicaoScrollAtual = 0
     var cabecalhoBranco = false
     var itensMenu = document.querySelectorAll('.item')
+    const menu = new Menu()
+    //MANIPULAÇÃO DOS SUB-ITENS
+    function Menu(){
+        this.itens = document.querySelectorAll('.ul-items-menu .item')
+        this.btnsSubmenus = document.querySelectorAll(('.ul-items-menu .content-submenu .btn-submenu'))
+        this.subMenus = document.querySelectorAll('.ul-items-menu .content-submenu .submenu')
 
+        //Função responsavel pela manipulações dos submenus
+        this.toggleSubMenus = ()=>{
+            
+            this.btnsSubmenus.forEach(btn=>{
 
+                btn.addEventListener('click',()=>{
+
+                    this.toggleSubMenu(btn)
+
+                })
+
+            })
+
+        }
+        //Função responsavel pela manipulações de um submenu
+        this.toggleSubMenu=(btnSubmenu=null)=>{
+
+            let subMenu = btnSubmenu.nextElementSibling
+            //Torna a altura no formato boolean para verifcar se tem altura ou não
+            let alturaSubmenu = !!subMenu.style.maxHeight
+
+            if(alturaSubmenu){
+                subMenu.style.maxHeight = null
+                btnSubmenu.classList.toggle('btn-submenu-ativo')
+            }else{
+
+                this.fechaSubMenuAberto()
+
+                subMenu.style.maxHeight = subMenu.scrollHeight+"px"
+                btnSubmenu.classList.toggle('btn-submenu-ativo')
+            }
+
+        }
+
+        this.fechaSubMenuAberto = ()=>{
+            this.subMenus.forEach(sub=>{
+
+                let alturaSubmenuAtivo = sub.style.maxHeight
+
+                if(alturaSubmenuAtivo){
+                    sub.style.maxHeight = null
+
+                    btnSubmenuAtivo = sub.previousElementSibling
+                    btnSubmenuAtivo.classList.toggle('btn-submenu-ativo')
+                }
+
+            })
+        }
+    }
+
+    menu.toggleSubMenus();
     
     //Aplica um pading-top no menu quando mobile
     menuPrincipal.style.paddingTop = alturaCabecalho+'px';
@@ -65,7 +121,7 @@ window.addEventListener('load', function(){
 
     //Controla o menu em relação ao tamanho da tela
     window.addEventListener('resize', function(){
-
+        menu.fechaSubMenuAberto()
         if(window.matchMedia("(max-width:990px)").matches){
             menuPrincipal.style.paddingTop = alturaCabecalho+'px';
         }else if(window.matchMedia("(min-width:991px)").matches && menuAberto){
@@ -182,6 +238,8 @@ window.addEventListener('load', function(){
 
         let posPartida = posicaoScrollAtual;
         let posDestino = posicaoSection;
+        
+        menu.fechaSubMenuAberto()
 
         window.scrollTo({
             top:posicaoSection - alturaCabecalho,

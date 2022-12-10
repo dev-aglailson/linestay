@@ -117,14 +117,52 @@
                 a{
                     width: 100%;
                     display: block;
-                    padding: 8px 30px;
+                    padding: 12px 30px;
                     font-size: .9em;
                     color: v.$cor-secundaria;
+                    font-weight: 900;
                 }
             }
             li.item:hover a{
                 color: v.$cor-branco;
-                background-color: v.$cor-primaria;
+                background-color: #000;
+            }
+            
+            .content-submenu{
+                .btn-submenu{
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    .btn-submenu-icon{
+                        transition: .3s;
+                        color: #FF8000;
+                    }
+                }
+                .btn-submenu-ativo{
+                    color: #FFFFFF;
+                    background-color: #000;
+                    .btn-submenu-icon{
+                        transform: rotate(90deg);
+                        transition: .3s; 
+                    }
+                }
+                .submenu{
+                    padding-left: 12px;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: .4s;
+                    .sub-item{
+                        a{
+                            background-color: #FFF;
+                            color: #000;
+
+                        }
+                    }
+                    .sub-item:hover a{
+                        background-color: #ff8000;
+                        color: #fff;
+                    }
+                }
             }
         }
     }
@@ -148,7 +186,7 @@
 //Mediaqueries 
 @media screen and (min-width: 990px) {
     .container-cabecalho{
-        padding: 15px 150px;
+        padding: 15px 60px;
 
         .content-logo-btn-menu{
             .btn-menu{
@@ -189,6 +227,47 @@
                             border-radius: 4px;
                             background-color: #FFF;
                         }
+                        .content-submenu{
+                            .btn-submenu{
+                                display: flex;
+                                justify-content: space-between;
+                                .btn-submenu-icon{
+                                    transition: .3s;
+                                    color: #FF8000;
+                                    transform: rotate(90deg);
+                                    margin-left: 10px;
+                                }
+                            }
+                            .btn-submenu-ativo{
+                                color: #FF8000;
+                                background-color: #fff;
+                                .btn-submenu-icon{
+                                    transform: rotate(0deg);
+                                    transition: .3s; 
+                                }
+                            }
+                            .submenu{
+                                padding-left: 0;
+                                max-height: 0;
+                                overflow: hidden;
+                                transition: .2s;
+                                position: absolute;
+                                border-radius: 0 0 3px 3px;
+                                .sub-item{
+                                    a{
+                                        background-color: #FFF;
+                                        color: #000;
+                                        border-radius: 0;
+                                        cursor: pointer;
+            
+                                    }
+                                }
+                                .sub-item:hover a{
+                                    background-color: #ff8000;
+                                    color: #fff;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -216,5 +295,12 @@
     
         }
         
+    }
+}
+
+//Mediaqueries 
+@media screen and (min-width: 1280px) {
+    .container-cabecalho{
+        padding: 15px 150px;
     }
 }

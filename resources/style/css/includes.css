@@ -21,7 +21,7 @@ a {
   position: relative;
   display: grid;
   grid-template-columns: [inicio-left] 30px [inicio-temp] 1fr repeat(12, 10px 1fr) [fim-temp] 30px [fim-rigth];
-  grid-template-rows: [inicio-section-home] 100vh [fim-section-home] 10px [inicio-section-servicos] 100vh [fim-section-servicos] 10px [inicio-section-precos] 100vh [fim-section-precos] 10px [inicio-section-sobre] 100vh [fim-section-sobre] 10px [inicio-section-time] 100vh [fim-section-time] 10px [inicio-section-contato] 100vh [fim-section-contato] 10px;
+  grid-template-rows: [inicio-section-home] 100vh [fim-section-home] 10px [inicio-section-servicos] 100vh [fim-section-servicos] 10px [inicio-section-sobre] 100vh [fim-section-sobre] 10px [inicio-section-ajuda] 100vh [fim-section-ajuda] 10px [inicio-section-time] 100vh [fim-section-time] 10px [inicio-section-contato] 100vh [fim-section-contato] 10px;
 }
 
 .contente-btn-volta-topo {
@@ -148,13 +148,45 @@ a {
 .content-menu .menu-principal .ul-items-menu li.item a {
   width: 100%;
   display: block;
-  padding: 8px 30px;
+  padding: 12px 30px;
   font-size: 0.9em;
   color: #333333;
+  font-weight: 900;
 }
 .content-menu .menu-principal .ul-items-menu li.item:hover a {
   color: #FFFFFF;
-  background-color: #ff6b81;
+  background-color: #000;
+}
+.content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu .btn-submenu-icon {
+  transition: 0.3s;
+  color: #FF8000;
+}
+.content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu-ativo {
+  color: #FFFFFF;
+  background-color: #000;
+}
+.content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu-ativo .btn-submenu-icon {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+.content-menu .menu-principal .ul-items-menu .content-submenu .submenu {
+  padding-left: 12px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.content-menu .menu-principal .ul-items-menu .content-submenu .submenu .sub-item a {
+  background-color: #FFF;
+  color: #000;
+}
+.content-menu .menu-principal .ul-items-menu .content-submenu .submenu .sub-item:hover a {
+  background-color: #ff8000;
+  color: #fff;
 }
 
 .content-menu-aberto {
@@ -172,7 +204,7 @@ a {
 
 @media screen and (min-width: 990px) {
   .container-cabecalho {
-    padding: 15px 150px;
+    padding: 15px 60px;
   }
   .container-cabecalho .content-logo-btn-menu .btn-menu {
     display: none;
@@ -209,8 +241,49 @@ a {
     border-radius: 4px;
     background-color: #FFF;
   }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu .btn-submenu-icon {
+    transition: 0.3s;
+    color: #FF8000;
+    transform: rotate(90deg);
+    margin-left: 10px;
+  }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu-ativo {
+    color: #FF8000;
+    background-color: #fff;
+  }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .btn-submenu-ativo .btn-submenu-icon {
+    transform: rotate(0deg);
+    transition: 0.3s;
+  }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .submenu {
+    padding-left: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    position: absolute;
+    border-radius: 0 0 3px 3px;
+  }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .submenu .sub-item a {
+    background-color: #FFF;
+    color: #000;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  .container-cabecalho .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu .content-submenu .submenu .sub-item:hover a {
+    background-color: #ff8000;
+    color: #fff;
+  }
   .cabecalho-branco .content-logo-btn-menu .content-menu .menu-principal .ul-items-menu li.item a {
     color: #333;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container-cabecalho {
+    padding: 15px 150px;
   }
 }
 .section-home {
@@ -224,9 +297,9 @@ a {
   grid-row: inicio-section-servicos/fim-section-servicos;
 }
 
-.section-precos {
+.section-ajuda {
   grid-column: inicio-temp/fim-temp;
-  grid-row: inicio-section-precos/fim-section-precos;
+  grid-row: inicio-section-ajuda/fim-section-ajuda;
 }
 
 .section-sobre {
