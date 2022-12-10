@@ -23,6 +23,9 @@ a {
   grid-template-columns: [inicio-left] 30px [inicio-temp] 1fr repeat(12, 10px 1fr) [fim-temp] 30px [fim-rigth];
   grid-template-rows: [inicio-section-home] 100vh [fim-section-home] 10px [inicio-section-servicos] 100vh [fim-section-servicos] 10px [inicio-section-sobre] 100vh [fim-section-sobre] 10px [inicio-section-ajuda] 100vh [fim-section-ajuda] 10px [inicio-section-time] 100vh [fim-section-time] 10px [inicio-section-contato] 100vh [fim-section-contato] 10px;
 }
+.container-principal .section {
+  padding: 15px 30px;
+}
 
 .contente-btn-volta-topo {
   position: fixed;
@@ -44,6 +47,20 @@ a {
   align-items: center;
 }
 
+@media screen and (min-width: 990px) {
+  .container-principal .section {
+    padding: 0 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container-principal .section {
+    padding: 0;
+  }
+  .container-principal .section .content {
+    width: 1280px;
+    margin: 0 auto;
+  }
+}
 .paraliza-body {
   overflow: hidden;
 }
@@ -299,8 +316,25 @@ a {
   grid-row: inicio-section-home/fim-section-home;
 }
 
+/* //Mediaqueries 
+@media screen and (min-width: 990px) {
+    .section-home{
+        padding: 0 60px;
+    }
+}
+
+//Mediaqueries 
+@media screen and (min-width: 1280px) {
+    .section-home{
+        padding: 0;
+        .content{
+            width: 1280px;
+            margin: 0 auto;
+        }
+    }
+} */
 .section-servicos {
-  grid-column: inicio-temp/fim-temp;
+  grid-column: inicio-left/fim-rigth;
   grid-row: inicio-section-servicos/fim-section-servicos;
 }
 
@@ -310,7 +344,7 @@ a {
 }
 
 .section-sobre {
-  grid-column: inicio-temp/fim-temp;
+  grid-column: inicio-left/fim-rigth;
   grid-row: inicio-section-sobre/fim-section-sobre;
 }
 
@@ -319,9 +353,9 @@ a {
   grid-row: inicio-section-time/fim-section-time;
 }
 
-.section-contato {
-  grid-column: inicio-temp/fim-temp;
-  grid-row: inicio-section-contato/fim-section-contato;
+.section-ajuda {
+  grid-column: inicio-left/fim-rigth;
+  grid-row: inicio-section-ajuda/fim-section-ajuda;
 }
 
 /*# sourceMappingURL=includes.css.map */

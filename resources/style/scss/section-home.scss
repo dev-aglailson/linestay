@@ -4,3 +4,21 @@
     grid-column: inicio-left / fim-rigth;
     grid-row:inicio-section-home / fim-section-home ;
 }
+
+/* //Mediaqueries 
+@media screen and (min-width: 990px) {
+    .section-home{
+        padding: 0 60px;
+    }
+}
+
+//Mediaqueries 
+@media screen and (min-width: 1280px) {
+    .section-home{
+        padding: 0;
+        .content{
+            width: 1280px;
+            margin: 0 auto;
+        }
+    }
+} */

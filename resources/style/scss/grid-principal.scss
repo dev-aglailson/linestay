@@ -11,6 +11,10 @@
                     [inicio-section-time] min(100vh) [fim-section-time]10px
                     [inicio-section-contato] min(100vh) [fim-section-contato]10px
                     ;
+
+    .section{
+        padding: v.$padding-container;
+    }
 }
 
 .contente-btn-volta-topo{
@@ -36,4 +40,27 @@
 
 
 
+}
+
+//Mediaqueries 
+@media screen and (min-width: 990px) {
+    .container-principal{
+        .section{
+            padding: 0 60px;
+        }
+    }
+}
+
+//Mediaqueries 
+@media screen and (min-width: 1280px) {
+    .container-principal{
+        .section{
+            padding: 0;
+            .content{
+                width: 1280px;
+                margin: 0 auto;
+            }
+        }
+
+    }
 }

@@ -1,0 +1,6 @@
+.section-ajuda {
+  grid-column: inicio-left/fim-rigth;
+  grid-row: inicio-section-ajuda/fim-section-ajuda;
+}
+
+/*# sourceMappingURL=section-ajuda.css.map */
