@@ -1,8 +1,284 @@
 @use 'v';
 .section-home{
-    background: linear-gradient( rgba(255,255,255,1) -30%, rgba(0,0,0,1));
+    background: linear-gradient( rgba(255,255,255,1) -50%, rgba(0,0,0,1));
     grid-column: inicio-left / fim-rigth;
     grid-row:inicio-section-home / fim-section-home ;
+
+    .content{
+        padding-top: 20px;
+
+        .row-box-titles-box-busca-garagem-simples{
+            display: flex;
+            flex-direction: column;
+
+            .box-titles{
+                flex: 1;
+                margin-bottom: 35px;
+                .titles-small{
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h1{
+                        width: 90%;
+                        font-size: 1.125em;
+                        color: #FFF;
+                        text-align: center;
+                    }
+                    span{
+                        width: 70%;
+                        margin-top: 20px;
+                        text-align: center;
+                        color: #efefef;
+                        font-size: .875em;
+                    }
+                }
+                .titles-large{
+                    display: none;
+                }
+            }
+            .box-busca-garagem{
+                flex: 1;
+                margin-top: 20px;
+                .content-form-busca-simples{
+                    background-color: #FFF;
+                    padding: 10px;
+                    padding-bottom: 0;
+                    border-radius: 4px;
+
+                    .content-title-localizacao{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 18px;
+
+                        .title{
+                            font-size: 1.2em;
+                            font-weight: bold;
+                            color: #444;
+                        }
+
+                        .localizacao{
+                            font-size: .9em;
+                            color: #ccc;
+                            cursor: pointer;
+                            span{
+                                color: #ff8000;
+                            }
+                            .icon{
+                                color: #ff8000;
+                            }
+                        }   
+                    }
+
+                    .form-busca{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .form-group{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 15px;
+                            justify-content: center;
+                            align-items: center;
+                            label{
+                                width: 100%;
+                                text-align: left;
+                                font-weight: bolder;
+                                margin-bottom: 8px;
+                                margin-bottom: 20px;
+                            }
+                            input{
+                                width: 90%;
+                                padding: 10px;
+                                outline: none;
+                                border: 1px solid #ccc;
+                                color: #444;
+                                font-size: 1em;
+                                text-align: center;
+                                border-radius: 4px;
+                            }
+                            button{
+                                padding: 10px 25px;
+                                border: none;
+                                background-color: #ff8000;
+                                color: #fff;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+                .content-resultado-busca-simples{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 50px;
+                    padding: 10px;
+        
+                    .box-title-btn-ver-todas{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 30px;
+                        .title{
+                            color: #FFF;
+                            font-size: 1.2em;
+                        }
+                        .btn-ver-todas{
+                            color: #fff;
+                            font-size: 0.9em;
+                            padding-right: 20px;
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .box-slider-resultado{
+                        .slider-resultado-simples{
+                            position: relative;
+                            .item-slider{
+                                background-color: #FFF;
+                                height: 250px;
+                                border-radius: 6px;
+                                border: 1px solid #dfdede;
+                                display: flex;
+                                justify-content: center;
+
+                                .tag-nivel-garagem{
+                                    position: absolute;
+                                    top: -10px;
+                                    width: 70px;
+                                    height: 20px;
+                                    background-color: #000;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 3px;
+                                    span{
+                                        color: #FFF;
+                                        font-size: .9em;
+                                        display: block;
+                                    }
+                                }
+                            }
+
+                            .owl-stage-outer{
+                                padding: 8px 0;
+                            }
+
+                            .owl-dots{
+                                width: 100%;
+                                position: absolute;
+                                bottom: -32px;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .section-home{
+        .content{
+            .row-box-titles-box-busca-garagem-simples{
+                align-items: center;
+                .box-busca-garagem{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 960px) {
+    .section-home{
+        .content{
+            padding-top: 90px;
+            
+            .row-box-titles-box-busca-garagem-simples{
+                flex-direction: row;
+                align-items: flex-start;
+                
+                .box-titles{
+                    .titles-small{
+                        display: none;
+                    }
+                    .titles-large{
+                        width: auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h1{
+                            width: 100%;
+                            font-size: 2.2em;
+                            color: #FFF;
+                            text-align: left;
+                        }
+                        span{
+                            width: 100%;
+                            margin-top: 30px;
+                            text-align: left;
+                            color: #efefef;
+                            font-size: 1.2em;
+                            padding-right: 20%;
+
+                        }
+                    }
+                }
+                
+                .box-busca-garagem{
+                    flex: 0;
+                    min-width: 40%;
+                    margin-top: 0;
+                    background-color: #FFF;
+                    border-radius: 8px;
+                    padding: 20px;
+
+                    .content-resultado-busca-simples{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 50px;
+            
+                        .box-title-btn-ver-todas{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 50px;
+                            .title{
+                                color: #333;
+                                font-size: 1.2em;
+                            }
+                            .btn-ver-todas{
+                                color: #333;
+                                font-size: 0.9em;
+                                padding-right: 20px;
+                            }
+                        }
+
+                        .box-slider-resultado{
+                            .slider-resultado-simples{
+                                .item-slider{
+                                    height: 290px;
+                                    box-shadow: 18px 21px 23px -24px rgba(0,0,0,1);
+                                }
+                                .owl-dots{
+                                    width: 100%;
+                                    position: absolute;
+                                    bottom: -32px;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* //Mediaqueries 

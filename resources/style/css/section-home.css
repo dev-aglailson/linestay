@@ -1,9 +1,249 @@
 .section-home {
-  background: linear-gradient(rgb(255, 255, 255) -30%, rgb(0, 0, 0));
+  background: linear-gradient(rgb(255, 255, 255) -50%, rgb(0, 0, 0));
   grid-column: inicio-left/fim-rigth;
   grid-row: inicio-section-home/fim-section-home;
 }
+.section-home .content {
+  padding-top: 20px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples {
+  display: flex;
+  flex-direction: column;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-titles {
+  flex: 1;
+  margin-bottom: 35px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-small {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-small h1 {
+  width: 90%;
+  font-size: 1.125em;
+  color: #FFF;
+  text-align: center;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-small span {
+  width: 70%;
+  margin-top: 20px;
+  text-align: center;
+  color: #efefef;
+  font-size: 0.875em;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-large {
+  display: none;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem {
+  flex: 1;
+  margin-top: 20px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples {
+  background-color: #FFF;
+  padding: 10px;
+  padding-bottom: 0;
+  border-radius: 4px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .content-title-localizacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .content-title-localizacao .title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #444;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .content-title-localizacao .localizacao {
+  font-size: 0.9em;
+  color: #ccc;
+  cursor: pointer;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .content-title-localizacao .localizacao span {
+  color: #ff8000;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .content-title-localizacao .localizacao .icon {
+  color: #ff8000;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .form-busca {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .form-busca .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .form-busca .form-group label {
+  width: 100%;
+  text-align: left;
+  font-weight: bolder;
+  margin-bottom: 8px;
+  margin-bottom: 20px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .form-busca .form-group input {
+  width: 90%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  color: #444;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 4px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-form-busca-simples .form-busca .form-group button {
+  padding: 10px 25px;
+  border: none;
+  background-color: #ff8000;
+  color: #fff;
+  border-radius: 2px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 10px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-title-btn-ver-todas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-title-btn-ver-todas .title {
+  color: #FFF;
+  font-size: 1.2em;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-title-btn-ver-todas .btn-ver-todas {
+  color: #fff;
+  font-size: 0.9em;
+  padding-right: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples {
+  position: relative;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples .item-slider {
+  background-color: #FFF;
+  height: 250px;
+  border-radius: 6px;
+  border: 1px solid #dfdede;
+  display: flex;
+  justify-content: center;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples .item-slider .tag-nivel-garagem {
+  position: absolute;
+  top: -10px;
+  width: 70px;
+  height: 20px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples .item-slider .tag-nivel-garagem span {
+  color: #FFF;
+  font-size: 0.9em;
+  display: block;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples .owl-stage-outer {
+  padding: 8px 0;
+}
+.section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples .owl-dots {
+  width: 100%;
+  position: absolute;
+  bottom: -32px;
+  margin: 0 auto;
+}
 
+@media screen and (min-width: 780px) {
+  .section-home .content .row-box-titles-box-busca-garagem-simples {
+    align-items: center;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .section-home .content {
+    padding-top: 90px;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-small {
+    display: none;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-large {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-large h1 {
+    width: 100%;
+    font-size: 2.2em;
+    color: #FFF;
+    text-align: left;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-titles .titles-large span {
+    width: 100%;
+    margin-top: 30px;
+    text-align: left;
+    color: #efefef;
+    font-size: 1.2em;
+    padding-right: 20%;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem {
+    flex: 0;
+    min-width: 40%;
+    margin-top: 0;
+    background-color: #FFF;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-title-btn-ver-todas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-title-btn-ver-todas .title {
+    color: #333;
+    font-size: 1.2em;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-title-btn-ver-todas .btn-ver-todas {
+    color: #333;
+    font-size: 0.9em;
+    padding-right: 20px;
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples .item-slider {
+    height: 290px;
+    box-shadow: 18px 21px 23px -24px rgb(0, 0, 0);
+  }
+  .section-home .content .row-box-titles-box-busca-garagem-simples .box-busca-garagem .content-resultado-busca-simples .box-slider-resultado .slider-resultado-simples .owl-dots {
+    width: 100%;
+    position: absolute;
+    bottom: -32px;
+    margin: 0 auto;
+  }
+}
 /* //Mediaqueries 
 @media screen and (min-width: 990px) {
     .section-home{

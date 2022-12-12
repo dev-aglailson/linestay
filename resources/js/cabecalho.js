@@ -11,7 +11,8 @@ window.addEventListener('load', function(){
     var cabecalhoBranco = false
     var itensMenu = document.querySelectorAll('.item')
     const menu = new Menu()
-    //MANIPULAÇÃO DOS SUB-ITENS
+
+    //CLASSE DE MANIPULAÇÃO DO MENU
     function Menu(){
         this.itens = document.querySelectorAll('.ul-items-menu .item')
         this.btnsSubmenus = document.querySelectorAll(('.ul-items-menu .content-submenu .btn-submenu'))

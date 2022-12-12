@@ -8,7 +8,7 @@
 
 .container-cabecalho {
   width: 100%;
-  padding: 15px 30px;
+  padding: 15px;
   position: fixed;
   z-index: 2;
 }

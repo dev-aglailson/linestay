@@ -5,7 +5,7 @@
   grid-template-rows: [inicio-section-home] 100vh [fim-section-home] 10px [inicio-section-servicos] 100vh [fim-section-servicos] 10px [inicio-section-sobre] 100vh [fim-section-sobre] 10px [inicio-section-ajuda] 100vh [fim-section-ajuda] 10px [inicio-section-time] 100vh [fim-section-time] 10px [inicio-section-contato] 100vh [fim-section-contato] 10px;
 }
 .container-principal .section {
-  padding: 15px 30px;
+  padding: 15px;
 }
 
 .contente-btn-volta-topo {
