@@ -11,9 +11,9 @@
             display: flex;
             flex-direction: column;
 
-            .box-titles{
+            .box-titles-btn-acao{
                 flex: 1;
-                margin-bottom: 35px;
+                margin-bottom: 26px;
                 .titles-small{
                     width: auto;
                     display: flex;
@@ -27,7 +27,7 @@
                     }
                     span{
                         width: 70%;
-                        margin-top: 20px;
+                        margin-top: 10px;
                         text-align: center;
                         color: #efefef;
                         font-size: .875em;
@@ -35,6 +35,25 @@
                 }
                 .titles-large{
                     display: none;
+                }
+                .div-btn-acao{
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+                    .btn-acao{
+                        background-color: #000;
+                        color: #FFF;
+                        padding: 10px 14px;
+                        display: flex;
+                        align-items: center;
+                        font-weight: bold;
+                        border-radius: 4px;
+                        .icon-btn{
+                            margin-left: 10px;
+                        }
+                    }
                 }
             }
             .box-busca-garagem{
@@ -107,6 +126,7 @@
                                 background-color: #ff8000;
                                 color: #fff;
                                 border-radius: 2px;
+                                cursor: pointer;
                             }
                         }
                     }
@@ -114,7 +134,7 @@
                 .content-resultado-busca-simples{
                     display: flex;
                     flex-direction: column;
-                    margin-top: 50px;
+                    margin-top: 30px;
                     padding: 10px;
         
                     .box-title-btn-ver-todas{
@@ -182,19 +202,19 @@
 
     }
 }
-
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 590px) {
     .section-home{
         .content{
             .row-box-titles-box-busca-garagem-simples{
                 align-items: center;
                 .box-busca-garagem{
-                    width: 90%;
+                    width: 80%;
                 }
             }
         }
     }
 }
+
 @media screen and (min-width: 960px) {
     .section-home{
         .content{
@@ -202,9 +222,13 @@
             
             .row-box-titles-box-busca-garagem-simples{
                 flex-direction: row;
-                align-items: flex-start;
+                align-items: stretch;
                 
-                .box-titles{
+                .box-titles-btn-acao{
+                    margin-bottom:0 ;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     .titles-small{
                         display: none;
                     }
@@ -227,6 +251,18 @@
                             font-size: 1.2em;
                             padding-right: 20%;
 
+                        }
+                    }
+                    .div-btn-acao{
+                        justify-content: flex-start;
+                        margin-top: 0px;
+                        .btn-acao{
+                            width: 300px;
+                            justify-content: center;
+                            padding: 15px;
+                            border-radius: 6px;
+                            .icon-btn{
+                            }
                         }
                     }
                 }
