@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: [inicio-left] 30px [inicio-temp] 1fr repeat(12, 10px 1fr) [fim-temp] 30px [fim-rigth];
     grid-template-rows: 
-                    [inicio-section-home] min(100vh) [fim-section-home]10px
+                    [inicio-section-home] auto [fim-section-home]10px
                     [inicio-section-servicos] min(100vh) [fim-section-servicos]10px
                     [inicio-section-sobre] min(100vh) [fim-section-sobre]10px
                     [inicio-section-ajuda] min(100vh) [fim-section-ajuda]10px
@@ -45,6 +45,14 @@
 //Mediaqueries 
 @media screen and (min-width: 990px) {
     .container-principal{
+        grid-template-rows: 
+        [inicio-section-home] min(100vh) [fim-section-home]10px
+        [inicio-section-servicos] min(100vh) [fim-section-servicos]10px
+        [inicio-section-sobre] min(100vh) [fim-section-sobre]10px
+        [inicio-section-ajuda] min(100vh) [fim-section-ajuda]10px
+        [inicio-section-time] min(100vh) [fim-section-time]10px
+        [inicio-section-contato] min(100vh) [fim-section-contato]10px
+        ;
         .section{
             padding: 0 60px;
         }

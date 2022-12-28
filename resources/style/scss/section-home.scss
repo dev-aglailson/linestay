@@ -5,7 +5,7 @@
     grid-row:inicio-section-home / fim-section-home ;
 
     .content{
-        padding-top: 20px;
+        padding: 20px 0;
 
         .row-box-titles-box-busca-garagem-simples{
             display: flex;
@@ -160,11 +160,12 @@
                             position: relative;
                             .item-slider{
                                 background-color: #FFF;
-                                height: 250px;
+                                height: 270px;
                                 border-radius: 6px;
                                 border: 1px solid #dfdede;
                                 display: flex;
                                 justify-content: center;
+                                overflow: hidden;
 
                                 .tag-nivel-garagem{
                                     position: absolute;
@@ -180,6 +181,78 @@
                                         color: #FFF;
                                         font-size: .9em;
                                         display: block;
+                                    }
+                                }
+                                .div-content-item-slider{
+                                    margin-top: 20px;
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+
+                                    .circle-imagem-garagem{
+                                        width: 90px;
+                                        height: 90px;
+                                        background-color: #333;
+                                        border-radius: 100%;
+                                        overflow: hidden;
+
+                                        .background-imagem{
+                                            width: 100%;
+                                            height: 100%;
+                                            display: block;
+                                            background-size: cover;
+                                            background-position: center center;
+                                        }
+                                    }
+
+                                    .title-garagem{
+                                        display: flex;
+                                        .title{
+                                            font-weight: bold;
+                                            color: #333;
+                                            padding: 10px 0;
+                                        }
+                                    }
+
+                                    .tipos-veiculos-garagem{
+                                        width: 100%;
+                                        margin-bottom: 8px;
+                                        .lista-tipos{
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: center;
+                                            .item-tipo{
+                                                color: rgb(139, 139, 139);
+                                                padding: 5px 10px;
+                                            }
+                                        }
+                                    }
+
+                                    .div-btn-estacionar{
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        margin-bottom: 10px;
+                                        .btn-estacionar{
+                                            background-color: #000;
+                                            color: #fff;
+                                            font-size: .85em;
+                                            padding: 10px 12px;
+                                            border-radius: 4px;
+                                            font-weight: bold;
+                                        }
+                                    }
+
+                                    .avaliacao-media{
+                                        width: 100%;
+                                        .lista-estrelas{
+                                            display: flex;
+                                            justify-content: center;
+                                            .item-estrela{
+                                                color: #fffb08;
+                                            }
+                                        }
                                     }
                                 }
                             }
