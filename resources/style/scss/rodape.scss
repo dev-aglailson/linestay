@@ -1,0 +1,28 @@
+@use 'v';
+
+
+.container-rodape{
+    padding: v.$padding-container;
+    background-color: #444;
+    .content-rodape{
+
+    }
+}
+
+//Mediaquerie min-990
+@media screen and (min-width: 990px) {
+    .container-rodape{
+        padding: 15px 60px;
+    }
+}
+
+//Mediaquerie min-1280
+@media screen and (min-width: 1280px) {
+    .container-rodape{
+        padding: 15px 0;
+        .content-rodape{
+            width: 1280px;
+            margin: 0 auto;
+        }
+    }
+}

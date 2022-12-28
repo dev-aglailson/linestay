@@ -704,4 +704,23 @@ a {
   grid-row: inicio-section-ajuda/fim-section-ajuda;
 }
 
+.container-rodape {
+  padding: 15px;
+  background-color: #444;
+}
+@media screen and (min-width: 990px) {
+  .container-rodape {
+    padding: 15px 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container-rodape {
+    padding: 15px 0;
+  }
+  .container-rodape .content-rodape {
+    width: 1280px;
+    margin: 0 auto;
+  }
+}
+
 /*# sourceMappingURL=includes.css.map */
