@@ -22,8 +22,8 @@ class Home extends Page{
             'site'=>$obOrganizacao->site
         ]);
 
-        //RETORNA A VIEW DA PAGE GENERICA
-        return parent::getPage('Sitema - Home', $content);
+        //RETORNA A VIEW DA PAGE HOME
+        return parent::getPage('LineStay - Home', $content);
     }
 
 }
